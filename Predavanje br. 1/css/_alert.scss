@@ -1,0 +1,25 @@
+.alert{
+    font-family: 'Arial';
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: $alert-bg;
+    border-radius: 10px;
+    p{
+        color: $alert-text-color;
+        a{
+            font-weight: bold;
+            color: $alert-text-color;
+        }
+    }
+    span{
+        background-color: $alert-text-color;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+    }
+}

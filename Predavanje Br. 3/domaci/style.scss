@@ -1,0 +1,70 @@
+@import 'mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+$sporedna-boja: rgb(149, 149, 149);
+$glavna-boja: darkred;
+
+.product{
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    padding: 4rem 2rem;
+
+    &-info{
+        padding-right: 2rem;
+        .category{
+            color: $sporedna-boja;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        h1{
+            font-size: 2rem;
+            margin-bottom: .5rem;
+        }
+        .product-price{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            h3{
+                margin-right: .5rem;
+            }
+            span{
+                color: $sporedna-boja;
+            }
+        }
+        p{
+            color: $sporedna-boja;
+        }
+        .stock{
+            margin: 1rem 0px;
+        }
+        .size{
+            color: black;
+            margin-bottom: .2rem;
+            font-weight: bold;
+        }
+        .buttons{
+            display: flex;
+            margin-bottom: 1.5rem;
+            .active{
+                @include create-size-btn($glavna-boja);
+            }
+            .non-active{
+                @include create-size-btn(lightgray)
+            }
+        }
+        .add-to-bag{
+            @include create-btn($glavna-boja, #fff);
+            margin-bottom: .5rem
+        }
+        .lifetime{
+            @include create-btn(transparent, $sporedna-boja);
+        }
+    }
+}

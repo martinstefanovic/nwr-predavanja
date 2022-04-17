@@ -1,0 +1,130 @@
+.alert {
+  -webkit-box-shadow: 0px 0px 15px lightgray;
+          box-shadow: 0px 0px 15px lightgray;
+  width: 300px;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.alert-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.alert-content h3 {
+  margin-bottom: .5rem;
+}
+
+.alert-content p {
+  color: gray;
+}
+
+.alert-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  padding-top: 0px;
+}
+
+.alert-footer .cancel-btn {
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  margin: .2rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background-color: lightgray;
+  color: black;
+}
+
+.alert-footer .cancel-btn:hover {
+  background-color: #bababa;
+}
+
+.alert-footer .delete-btn {
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  margin: .2rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background-color: red;
+  color: #fff;
+}
+
+.alert-footer .delete-btn:hover {
+  background-color: #cc0000;
+}
+
+.box {
+  background-color: coral;
+  margin-top: 3rem;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.o-nama {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.error, .notification {
+  border: 1px solid red;
+  padding: 1rem;
+  color: red;
+}
+
+.notification {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Arial';
+}
+/*# sourceMappingURL=style.css.map */

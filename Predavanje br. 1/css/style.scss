@@ -1,0 +1,100 @@
+
+// @import 'variables';
+// @import 'alert';
+// @import 'box';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@mixin kreiraj-dugme($boja-slova,$boja-pozadine){
+    padding: .5rem 1rem;
+    color: $boja-slova;
+    border-radius: 4px;
+    border-color: transparent;
+    background-color: $boja-pozadine;
+    cursor: pointer;
+    &:hover{
+        background-color: darken($boja-pozadine, 10%);
+    }
+}
+
+@mixin kreiraj-karticu($boja){
+    padding: 1rem;
+    border-radius: 4px;
+    width: fit-content;
+    box-shadow: 0px 0px 15px $boja;
+}
+
+@mixin center($smer) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $smer;
+}
+
+.text{
+    width: 100%;
+    height: 140px;
+    background-color: invert(coral);
+    @include center(column);
+}
+
+.error {
+    color: red;
+    border: 1px solid red;
+}
+
+.notification{
+    width: fit-content;
+    font-weight: bold;
+    padding: 1rem;
+    margin: 1rem;
+    @extend .error
+}
+
+.confirm{
+    @include kreiraj-karticu(lightgray);
+
+    .dugme{
+        @include kreiraj-dugme(white, red)
+    }
+    
+    .dugme-2{
+        @include kreiraj-dugme(black, lightgray)
+    }
+}
+
+
+.alert{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+// * OVO JE CSS
+// .box h1{
+//     border: 1px solid red;
+// }
+
+// .box .podnaslov span{
+//     color: green;
+// }
+
+// * OVO JE SCSS
+// .box{
+//     background-color: $sporedna-boja;
+//     h1{
+//         border: 1px solid red;
+//     }
+//     .podnaslov{
+//         span{
+//             color: green;
+//         }
+//     }
+// }
+
+
+

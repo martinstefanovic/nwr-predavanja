@@ -1,0 +1,26 @@
+
+
+@mixin create-size-btn($boja-bordera) {
+    display: block;
+    border: 2px solid $boja-bordera;
+    padding: .8rem;
+    text-decoration: none;
+    border-radius: 7px;
+    margin-right: .6rem;
+    h4{
+        color: black;
+    }
+    p{
+        font-size: .8rem;
+    }
+}
+
+@mixin create-btn($boja-pozadine, $boja-slova) {
+    border: none;
+    display: block;
+    width: 100%;
+    padding: .6rem;
+    border-radius: 7px;
+    color: $boja-slova;
+    background-color: $boja-pozadine;
+}

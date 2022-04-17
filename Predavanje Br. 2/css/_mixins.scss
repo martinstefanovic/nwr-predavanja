@@ -1,0 +1,26 @@
+
+
+@mixin kreiraj-dugme($boja-pozadine, $boja-slova:black){
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    margin: .2rem;
+    transition: all .3s;
+    background-color: $boja-pozadine;
+    color: $boja-slova;
+
+    &:hover{
+        background-color: darken($boja-pozadine,10%);
+    }
+}
+
+@mixin border($boja) {
+    border: 1px solid $boja;
+}
+
+@mixin center($smer) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $smer;
+}

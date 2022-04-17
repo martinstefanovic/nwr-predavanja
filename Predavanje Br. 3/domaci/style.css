@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 900px;
+  padding: 4rem 2rem;
+}
+
+.product-info {
+  padding-right: 2rem;
+}
+
+.product-info .category {
+  color: #959595;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.product-info .product-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.product-info .product-price h3 {
+  margin-right: .5rem;
+}
+
+.product-info .product-price span {
+  color: #959595;
+}
+
+.product-info p {
+  color: #959595;
+}
+
+.product-info .stock {
+  margin: 1rem 0px;
+}
+
+.product-info .size {
+  color: black;
+  margin-bottom: .2rem;
+  font-weight: bold;
+}
+
+.product-info .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.product-info .buttons .active {
+  display: block;
+  border: 2px solid darkred;
+  padding: .8rem;
+  text-decoration: none;
+  border-radius: 7px;
+  margin-right: .6rem;
+}
+
+.product-info .buttons .active h4 {
+  color: black;
+}
+
+.product-info .buttons .active p {
+  font-size: .8rem;
+}
+
+.product-info .buttons .non-active {
+  display: block;
+  border: 2px solid lightgray;
+  padding: .8rem;
+  text-decoration: none;
+  border-radius: 7px;
+  margin-right: .6rem;
+}
+
+.product-info .buttons .non-active h4 {
+  color: black;
+}
+
+.product-info .buttons .non-active p {
+  font-size: .8rem;
+}
+
+.product-info .add-to-bag {
+  border: none;
+  display: block;
+  width: 100%;
+  padding: .6rem;
+  border-radius: 7px;
+  color: #fff;
+  background-color: darkred;
+  margin-bottom: .5rem;
+}
+
+.product-info .lifetime {
+  border: none;
+  display: block;
+  width: 100%;
+  padding: .6rem;
+  border-radius: 7px;
+  color: #959595;
+  background-color: transparent;
+}
+/*# sourceMappingURL=style.css.map */
