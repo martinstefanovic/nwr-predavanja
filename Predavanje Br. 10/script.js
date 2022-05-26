@@ -155,3 +155,4 @@
 // ? budzet manji od 0 ispisati: "USLI STE U MINUS"
 // ? Kolicina novca koju trosi korisnik unosi se preko
 // ? prompt-a
+
