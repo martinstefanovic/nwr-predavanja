@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSD to EUR</title>
+</head>
+<body>
+    
+    <span>RSD</span>    
+    <input type="text" id="input-rsd">
+
+    <span>EUR</span>
+    <input type="text" id="input-eur" disabled>
+
+    <button id="btn">Konvertuj</button>
+
+    <script>
+
+        const button = document.getElementById('btn')
+        const inputRSD = document.getElementById('input-rsd')
+        const inputEUR = document.getElementById('input-eur')
+
+        button.addEventListener('click',()=>{
+            inputEUR.value = inputRSD.value / 119
+        })
+        
+    </script>
+    
+</body>
+</html>
