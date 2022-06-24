@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+
+    <h1 class="text-2xl font-medium ml-8 mt-8">Budget app</h1>
+    <main class="p-8 flex">
+        <section class="mr-20">
+            <div class="flex flex-col">
+                <label class="text-slate-400 mb-1">Enter your budget</label>
+                <input id="budget-input" type="number" class="border p-2 w-[240px]" >
+                <button id="add-budget-btn" class="py-2 px-3 text-white bg-emerald-500 w-fit mt-4">Add budget</button>
+            </div>
+            <div class="flex flex-col mt-8">
+                <label class="text-slate-400 mb-1">Enter your expense</label>
+                <input id="expense-message" type="text" class="border p-2 w-[240px]">
+                <label class="text-slate-400 mb-1">Expense amount</label>
+                <input id="expense-amount" type="number" class="border p-2 w-[240px]">
+                <button id="add-expense-btn" class="py-2 px-3 text-white bg-rose-500 w-fit mt-4">Add expense</button>
+            </div>
+        </section>
+        <section>
+            <div class="flex">
+                <article class="mr-20 flex flex-col items-center">
+                    <span class="mb-1">Budget</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 15h0M2 9.5h20"/></svg>
+                    <h2 id="budget-number" class="text-3xl mt-3 text-emerald-500 font-medium">0</h2>
+                </article>
+                <article class="mr-20 flex flex-col items-center">
+                    <span class="mb-1">Expenses</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="20.5" r="1"/><circle cx="18" cy="20.5" r="1"/><path d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"/></svg>
+                    <h2 id="expense-number" class="text-3xl mt-3 text-rose-500 font-medium">0</h2>
+                </article>
+                <article class="flex flex-col items-center">
+                    <span class="mb-1">Balance</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    <h2 id="balance-number" class="text-3xl mt-3 text-blue-500 font-medium">0</h2>
+                </article>
+            </div>
+            <h2 class="mt-10 mb-2 font-medium">Expenses history</h2>
+            <div id="expenses-history-container">
+                <!-- <article class="bg-slate-100 p-2 mb-2 flex justify-between">
+                    <span class="mr-3">- Buy milk</span>
+                    <span class="text-rose-500 font-medium mr-3">30</span>
+                </article> -->
+            </div>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
