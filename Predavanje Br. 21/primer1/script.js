@@ -1,12 +1,27 @@
-// API
+/**
+ * =================================
+ * *           VARIABLES
+ * =================================
+ */
+
 const API_URL = 'https://dummyjson.com'
-// HTML Elements
 const allProductsElement = document.getElementById('all-products')
 const productPopupElement = document.getElementById('product-popup')
-// Buttons
 const closePopupButton = document.getElementById('close-popup')
 
+/**
+ * =================================
+ * *      MAIN FUNCTIONALITY
+ * =================================
+ */
+
 getAllProducts()
+
+/**
+ * =================================
+ * *        HELPER FUNCTIONS
+ * =================================
+ */
 
 // Get all products from API
 function getAllProducts(){
@@ -23,7 +38,7 @@ function getAllProducts(){
 function createProductCard(product){
     // Product card 
     const productCard = document.createElement('div')
-    productCard.classList = 'm-4 p-4 border w-[270px] flex flex-col items-center h-[250px]'
+    productCard.classList = 'p-4 border flex flex-col items-center h-[250px] bg-white relative'
     productCard.setAttribute('data-productid', product.id)
     productCard.addEventListener('click', (event)=>{
         console.log(event.target.getAttribute('data-productid'))
@@ -36,11 +51,11 @@ function createProductCard(product){
     // Product title
     const title = document.createElement('h2')
     title.innerText = product.title
-    title.classList = ' mt-6 font-medium text-center'
+    title.classList = 'mt-3 font-medium text-center'
     // Product price
     const price = document.createElement('h3')
-    price.innerText = product.price
-    price.classList = 'bg-rose-500 text-white px-2 mt-1 font-medium'
+    price.innerText = `$${product.price}`
+    price.classList = 'bg-slate-700 text-lg text-white px-2 font-medium absolute top-0'
 
     // Append info to product card
     productCard.appendChild(img)
@@ -57,9 +72,9 @@ function togglePopup(){
 }
 
 /**
- * ==============================
- * *      Event listeners
- * ==============================
+ * =================================
+ * *        EVENT LISTENERS
+ * =================================
  */
 
 closePopupButton.addEventListener('click', ()=>{
