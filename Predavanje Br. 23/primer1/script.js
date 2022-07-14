@@ -9,6 +9,7 @@ const allProductsElement = document.getElementById('all-products');
 const productPopupElement = document.getElementById('product-popup');
 const closePopupButton = document.getElementById('close-popup');
 const categoryContainer = document.getElementById('category-container')
+const productDescription = document.getElementById('product-description')
 
 /**
  * =================================
@@ -130,11 +131,12 @@ function createProductCard(product) {
   const btn = document.createElement('button');
   btn.innerText = `View more`;
   btn.classList = 'bg-sky-100 hover:bg-sky-500 transition-all text-sky-500 hover:text-white px-2 py-2 w-full text-center absolute bottom-0 cursor-pointer';
-  btn.setAttribute('data-productid', product.id);
-  btn.addEventListener('click', (event) => {
-    console.log(event.target.getAttribute('data-productid'));
-    togglePopup();
-  });
+  btn.setAttribute('data-productid', product.id)
+  btn.addEventListener('click', (event)=>{
+      console.log(event.target.getAttribute('data-productid'))
+      togglePopup()
+      getOneProduct(event.target.getAttribute('data-productid'))
+  })
 
   // Append info to product card
   productCard.appendChild(img);
@@ -148,6 +150,37 @@ function createProductCard(product) {
 
 function togglePopup() {
   productPopupElement.classList.toggle('hidden');
+}
+
+function getOneProduct(productId){
+  fetch(`${API_URL}/products/${productId}`)
+      .then(response => response.json())
+      .then(json => {
+          putElementInPopup(json)
+          console.log(json)
+      })
+}
+
+function putElementInPopup(product){
+  // name of element
+  const nameElement = document.createElement('h2')
+  nameElement.innerText = product.brand
+  // img
+  const imgElement = document.createElement('img')
+  imgElement.setAttribute('src', product.thumbnail)
+  // description
+  const description = document.createElement('p')
+  description.innerText = product.description
+  // price
+  const price = document.createElement('span')
+  price.innerText = product.price
+
+  //append
+  productDescription.appendChild(imgElement)
+  productDescription.appendChild(nameElement)
+  productDescription.appendChild(description)
+  productDescription.appendChild(price)
+
 }
 
 /**
