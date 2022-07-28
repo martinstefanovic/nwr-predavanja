@@ -20,10 +20,14 @@
     <!-- * Filters -->
     <section class="mt-8">
         <div class="container mx-auto flex justify-between">
-            <input id="search-field" class="p-3 min-w-[300px] border" type="text" placeholder="Search for country...">
+            <div class="relative">
+                <svg id="search-btn" class="absolute left-2 top-3 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input id="search-field" class="p-3 pl-10 min-w-[300px] border" type="text" placeholder="Search for country...">
+                <svg id="reset-search" class="absolute right-2 top-3 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#cecece" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </div>
             <select id="filter-region" class="p-3 border">
                 <option disabled selected>Filter by region</option>
-                <option value="africa">All regions</option>
+                <option value="all">All regions</option>
                 <option value="africa">Africa</option>
                 <option value="americas">Americas</option>
                 <option value="asia">Asia</option>

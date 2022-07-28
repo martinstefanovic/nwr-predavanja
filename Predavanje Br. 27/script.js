@@ -1,19 +1,52 @@
 const resultList = document.getElementById('result-list')
 const searchField = document.getElementById('search-field')
 const filterRegion = document.getElementById('filter-region')
+const searchBtn = document.getElementById('search-btn')
+const resetSearchBtn = document.getElementById('reset-search')
 const API_URL = 'https://restcountries.com/v3.1';
 
 
 getAllCountries()
 
 filterRegion.addEventListener('change', ()=>{
-    filterByRegion()
+    if(filterRegion.value === 'all'){
+        getAllCountries()
+    }else{
+        filterByRegion()
+    }
 })
+
+searchBtn.addEventListener('click', ()=>{
+    searchCountries()
+})
+
+resetSearchBtn.addEventListener('click',()=>{
+    getAllCountries()
+})
+
+function searchCountries(){
+    fetch(`${API_URL}/name/${searchField.value}`)
+        .then(res => res.json())
+        .then(countries => {
+            resultList.innerHTML = ''
+
+            if(countries.status === 404){
+                resultList.innerText = 'Not found!'
+            }else{
+                countries.forEach(country=>{
+                    createCountryCard(country)
+                })
+            }
+
+        })
+}
 
 function getAllCountries(){
     fetch(`${API_URL}/all`)
         .then(res => res.json())
         .then(countries =>{
+            resultList.innerHTML = ''
+            searchField.value = ''
             countries.forEach(country => {
                 createCountryCard(country)
             });
@@ -70,5 +103,5 @@ function createCountryCard(country){
 
     // Append card to results
     resultList.appendChild(card)
-
 }
+
