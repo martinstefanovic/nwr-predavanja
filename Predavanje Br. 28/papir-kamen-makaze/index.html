@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    *{
+      font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+    body{
+      background-image: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="border-4 border-slate-600 flex items-center justify-between p-4 rounded-md w-[70%] mx-auto mt-5">
+    <div class="text-white flex flex-col justify-center">
+      <h2 class="-mb-2 text-xl">ROCK</h2>
+      <h2 class="-mb-2 text-xl">PAPER</h2>
+      <h2 class="-mb-2 text-xl">SCISSORS</h2>
+    </div>
+    <div class="bg-slate-100 w-fit rounded-md flex flex-col items-center justify-center px-4 py-2">
+      <span class="text-sm block font-medium text-blue-900">SCORE</span>
+      <h2 class="text-3xl font-bold text-slate-700 -m-1">0</h2>
+    </div>
+  </header>
+
+  <section class="flex flex-col items-center mt-10">
+    <div class="flex items-center">
+      <div data-option="paper" class="game-option w-[130px] h-[130px] bg-white border-[15px] rounded-full
+       border-blue-500 flex items-center justify-center mr-6 cursor-pointer
+       hover:border-blue-600 transition-all shadow-2xl">
+        <img src="./images/icon-paper.svg" alt="">
+      </div>
+      <div data-option="rock" class="game-option w-[130px] h-[130px] bg-white border-[15px] rounded-full
+      border-yellow-500 flex items-center justify-center ml-6 cursor-pointer
+      hover:border-yellow-600 transition-all shadow-2xl">
+        <img src="./images/icon-rock.svg" alt="">
+      </div>
+    </div>
+    <div data-option="scissors" class="game-option w-[130px] h-[130px] bg-white border-[15px] rounded-full
+    border-red-500 flex items-center justify-center mt-6 cursor-pointer
+    hover:border-red-600 transition-all shadow-2xl">
+      <img src="./images/icon-scissors.svg" alt="">
+    </div>
+  </section>
+
+  <section>
+
+  </section>
+
+
+  <script src="./script.js"></script>
+</body>
+</html>
