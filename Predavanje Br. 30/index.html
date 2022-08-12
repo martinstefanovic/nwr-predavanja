@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid 19</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- * Header -->
+    <div
+      class="container mx-auto bg-indigo-500 p-4 flex justify-between items-center"
+    >
+      <h2 class="font-medium text-xl text-white">Coronavirus Report</h2>
+      <div>
+        <a
+          class="text-white font-medium hover:text-indigo-100 hover:underline"
+          href="index.html"
+          >Početna</a
+        >
+      </div>
+    </div>
+
+    <!-- * Filter -->
+    <div class="container mx-auto flex mt-10 items-end">
+      <div class="flex flex-col w-[200px] mr-2">
+        <span class="text-sm text-slate-400">Izaberi državu</span>
+        <select id="country" class="p-2 border">
+          <option selected disabled value="">Izaberi</option>
+        </select>
+      </div>
+      <div class="flex flex-col w-[200px] mr-2">
+        <span class="text-sm text-slate-400">Datum od</span>
+        <input id="dateFrom" type="date" class="p-2 border" />
+      </div>
+      <div class="flex flex-col w-[200px]">
+        <span class="text-sm text-slate-400">Datum od</span>
+        <input id="dateTo" type="date" class="p-2 border" />
+      </div>
+      <button
+        id="search-btn"
+        class="px-5 py-2 bg-indigo-500 hover:bg-indigo-600 transition-all text-white min-h-[44px] ml-4"
+      >
+        Pretraži
+      </button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

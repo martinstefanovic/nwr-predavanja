@@ -63,6 +63,7 @@ function getAllCategories() {
   fetch(`${API_URL}/products/categories`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data)
       data.forEach((item) => {
         createCategory(item);
       });
@@ -84,6 +85,7 @@ function showCategory(category) {
   fetch(`${API_URL}/products/category/${category}`)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data)
       allProductsElement.innerText = '';
       data.products.forEach((item) => {
         createProductCard(item);
@@ -210,3 +212,8 @@ function putElementInPopup(product){
 closePopupButton.addEventListener('click', () => {
   togglePopup();
 });
+
+
+
+
+

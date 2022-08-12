@@ -6,6 +6,26 @@ const resetSearchBtn = document.getElementById('reset-search')
 const API_URL = 'https://restcountries.com/v3.1';
 
 
+
+
+searchField.addEventListener('keypress', (event)=>{
+    console.log(event)
+    if(event.keyCode === 13){
+        searchCountries()
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
 getAllCountries()
 
 filterRegion.addEventListener('change', ()=>{
